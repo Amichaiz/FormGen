@@ -161,11 +161,12 @@ const DynamicForm = ({ schema }: { schema: FormSchema }) => {
       <Grid container spacing={4}>
         {/* Form on the Left */}
         <Grid item xs={12} md={6}>
-          <Card sx={{ maxWidth: 600, mx: "auto" }}>
-            <CardContent>
-              <Typography variant="h4" gutterBottom align="center">
+        <Typography variant="h4" gutterBottom align="center">
                 {schema.title}
               </Typography>
+          <Card sx={{ maxWidth: 600, mx: "auto" }}>
+            <CardContent>
+              
               <form onSubmit={handleSubmit(onSubmit)}>
                 {schema.fields.map((field) => (
                   <div key={field.name}>{renderField(field)}</div>
